@@ -5,9 +5,9 @@ let jsonString = "{\"location\": \"the moon\"}"
 
 if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
                                                     in: .userDomainMask).first {
-    let pathWithFilename = documentDirectory.appendingPathComponent("myJsonString.json")
+    let pathWithFileName = documentDirectory.appendingPathComponent("myJsonString.json")
     do {
-        try jsonString.write(to: pathWithFilename,
+        try jsonString.write(to: pathWithFileName,
                              atomically: true,
                              encoding: .utf8)
     } catch {
